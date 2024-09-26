@@ -16,4 +16,20 @@ public interface Calculator {
     static int difference(int a, int b){
         return a - b;
     }
+
+    static int add() {
+        return 0;
+    }
+
+    static int difference() {
+        return 0;
+    }
+
+    static int multiplication() {
+        return 0;
+    }
+
+    static int div() {
+        return 0;
+    }
 }

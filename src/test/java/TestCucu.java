@@ -1,3 +1,4 @@
+import org.example.Calculator;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -5,24 +6,21 @@ import static org.junit.Assert.assertEquals;
 public class TestCucu {
     @Test
     public void testSum() {
-        assertEquals(4, result);
+        assertEquals(4, Calculator.add(2,2));
     }
 
     @Test
     public void testDiff() {
-        int result = Difference.dif(2, 2);
-        assertEquals(0, result);
+        assertEquals(4, Calculator.difference(6,2));
     }
 
     @Test
     public void testComp() {
-        int result = Difference.dif(2, 2);
-        assertEquals(0, result);
+        assertEquals(4, Calculator.multiplication(2,2));
     }
 
     @Test
     public void testDiv() {
-        int result = Divan.div(2, 2);
-        assertEquals(1, result);
+        assertEquals(4, Calculator.div(8,2));
     }
 }
