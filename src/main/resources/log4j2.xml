@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Определение файла для логов -->
+        <File name="FileLogger" fileName="logs/calculator.log" append="true">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- Логгер для класса Calculator -->
+        <Logger name="org.example.Calculator" level="error" additivity="false">
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+
+        <!-- Корневой логгер (если потребуется логировать другие части системы) -->
+        <Root level="error">
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
